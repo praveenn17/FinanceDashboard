@@ -1,5 +1,6 @@
 # Finance Dashboard
 
+
 A clean, responsive, and interactive finance dashboard UI built with modern web technologies. This application helps users track their financial activity with beautiful dark-mode supported charts, role-based controls, and insightful data summaries.
 
 ## 🚀 Features
@@ -77,4 +78,5 @@ The application utilizes React's Context API (`AppContext.jsx`) to avoid prop dr
 All three state variables are synchronized with the browser's `localStorage` via simple `useEffect` hooks. This ensures your dashboard feels like a real desktop application—data survives page refreshes entirely without a backend.
 
 The `RoleSwitcher` acts as a pure frontend simulation. In `TransactionTable.jsx` and `Transactions.jsx`, action buttons (Add, Edit, Delete) are conditionally rendered depending on whether `role === 'admin'`. Furthermore, the `addTransaction`, `editTransaction`, and `deleteTransaction` functions deliberately fail fast if invoked by a non-admin, adding a secondary layer of mock security to the frontend logic.
+
 The live Link : https://finance-dashboard-khaki-eight.vercel.app/
