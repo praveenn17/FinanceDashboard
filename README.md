@@ -1,82 +1,56 @@
-# Finance Dashboard
+Finance Dashboard App (Web + Android)
 
+A modern, responsive Finance Dashboard built with React + Vite, transformed into a real Android App (APK) using Capacitor.
 
-A clean, responsive, and interactive finance dashboard UI built with modern web technologies. This application helps users track their financial activity with beautiful dark-mode supported charts, role-based controls, and insightful data summaries.
+📱 One codebase → Web App + Mobile App
 
-## 🚀 Features
+🌐 Live Demo
+👉 https://finance-dashboard-khaki-eight.vercel.app/dashboard
 
-- **Dashboard Overview**: Highly visual cards and charts (Line Chart, Pie Chart) displaying balance, income, and expense trends.
-- **Transactions Management**: Complete tabular view of all transactions with searching, filtering (by type and category), and sorting.
-- **Role-Based UI**:
-  - **Viewer**: Read-only access to the dashboard and transactions.
-  - **Admin**: Full access. Can add new transactions, edit existing ones, and delete records via an intuitive modal interface.
-- **AI-like Insights**: Automatic generation of insights based on transaction history (e.g. tracking highest spending category, month-over-month comparisons).
-- **Persistent State**: Utilizes React Context API and LocalStorage to save your data, theme preference, and role between sessions.
-- **Modern Styling**: Designed using Tailwind CSS with robust Dark/Light mode support, fluid micro-animations, and glassmorphic elements.
+📱 APK Download
+Install the Android app directly
 
-## 🧱 Tech Stack
+📦 Download APK
 
-- **React.js** (Functional Components + Hooks)
-- **Vite** (Next Generation Frontend Tooling)
-- **Tailwind CSS v3** (Utility-first styling)
-- **Recharts** (Data Visualization)
-- **React Router v6** (Client-side routing)
-- **Lucide React** (Beautiful, consistent icons)
-- **date-fns** (Date manipulation)
+⚙️ Tech Stack
+⚛️ React.js
+⚡ Vite
+🎨 Tailwind CSS
+📊 Charting (analytics UI)
+🔌 Capacitor (Web → Android App)
 
-## 📁 Project Structure
+✨ Features
+📊 Interactive Dashboard UI
+💰 Income / Expense Tracking
+📈 Visual Analytics & Charts
+👤 Role-based UI (Admin / Viewer)
+🌙 Dark Mode
+💾 Local Storage Persistence
+📱 Converted to Android App
+🧠 What makes this special?
 
-```
-src/
-├── components/
-│   ├── Charts/
-│   │   ├── LineChart.jsx  # Trend of balance over time
-│   │   └── PieChart.jsx   # Expenses broken down by category
-│   ├── Filters.jsx        # Search and drop-down filters for the transaction table
-│   ├── RoleSwitcher.jsx   # Global toggle between 'viewer' and 'admin'
-│   ├── Sidebar.jsx        # Responsive navigation sidebar
-│   ├── SummaryCard.jsx    # Highlights for Total Balance, Income, etc.
-│   └── TransactionTable.jsx # Main data table with sort headers and action buttons
-├── context/
-│   └── AppContext.jsx     # Global State Management + LocalStorage sync
-├── data/
-│   └── mockData.js        # Initial data structures for the app
-├── pages/
-│   ├── Dashboard.jsx      # Top-level overview and charts
-│   ├── Insights.jsx       # Simple data-drawn observations
-│   └── Transactions.jsx   # Detailed ledger view with Admin modals
-├── App.jsx                # Layout shell and react-router setup
-├── index.css              # Global styles and Tailwind Dark Mode CSS variables
-└── main.jsx               # Application entry point
-```
+✔ Built as a web app first
+✔ Then transformed into a native Android app (APK)
+✔ Demonstrates real-world full-stack thinking
+✔ Clean UI + scalable architecture
 
-## 🛠️ Setup Instructions
+🚀 Run Locally
+git clone https://github.com/praveenn17/FinanceDashboard.git
+cd FinanceDashboard
+npm install
+npm run dev
 
-Since this project was generated in an environment without Node pre-installed, you'll need Node.js and `npm` (or `yarn`/`pnpm`) installed on your system to run it.
+📦 Build APK
+npm run build
+npx cap sync
+npx cap open android
 
-1. **Install Dependencies**:
-   Open a terminal in the project root (`d:\Assignment Finance`) and run:
-   ```bash
-   npm install
-   ```
+📌 Future Improvements
+🔐 Authentication system
+☁️ Backend integration
+📊 Advanced analytics
+🚀 Play Store deployment
+👨‍💻 Author
 
-2. **Start the Development Server**:
-   ```bash
-   npm run dev
-   ```
-
-3. **View the Application**:
-   Open your browser and navigate to the local URL provided by Vite (typically `http://localhost:5173`).
-
-## 🧠 State Management & Persistence
-
-The application utilizes React's Context API (`AppContext.jsx`) to avoid prop drilling and provide global access to:
-- `transactions`: The core array of financial records.
-- `role`: The user's mock permission level ('viewer' or 'admin').
-- `theme`: The user's styling preference ('light' or 'dark').
-
-All three state variables are synchronized with the browser's `localStorage` via simple `useEffect` hooks. This ensures your dashboard feels like a real desktop application—data survives page refreshes entirely without a backend.
-
-The `RoleSwitcher` acts as a pure frontend simulation. In `TransactionTable.jsx` and `Transactions.jsx`, action buttons (Add, Edit, Delete) are conditionally rendered depending on whether `role === 'admin'`. Furthermore, the `addTransaction`, `editTransaction`, and `deleteTransaction` functions deliberately fail fast if invoked by a non-admin, adding a secondary layer of mock security to the frontend logic.
-
-The live Link : https://finance-dashboard-khaki-eight.vercel.app/
+Praveen Kumar
+B.Tech CSE | Full Stack + AI Enthusiast
