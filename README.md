@@ -5,7 +5,7 @@ A modern, responsive Finance Dashboard built with React + Vite, transformed into
 📱 One codebase → Web App + Mobile App
 
 🌐 Live Demo
-https://finance-dashboard-khaki-eight.vercel.app/dashboard
+https://finance-dashboard-seven-green.vercel.app/dashboard
 
 📱 APK Download
 Install the Android app directly
